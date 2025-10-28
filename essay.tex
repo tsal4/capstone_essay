@@ -26,10 +26,10 @@ Cleveland, United States \\
 sloya25@jcu.edu}
 \and
 
-\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-City, Country \\
-email address or ORCID}
+\IEEEauthorblockN{3\textsuperscript{Francis Freeman }
+\IEEEauthorblockA{\textit{John Carroll University)} \\
+Cleveland, US \\
+ffreeman26@jcu.edu}
 \and
 
 \IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
@@ -56,20 +56,18 @@ Cloud vs Edge computing has been a topic for debate for some time now, questioni
 
 \section{An Overview of Edge Computing}
 
-The IEEEtran class file is used to format your paper and style the text. All margins, 
-column widths, line spaces, and text fonts are prescribed; please do not 
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement 
-and others are deliberate, using specifications that anticipate your paper 
-as one part of the entire proceedings, and not as an independent document. 
-Please do not revise any of the current designations.
+Edge computing is a distributed architecture that pushes compute, storage, and networking closer to where data is generated rather than sending everything to distant centralized clouds. Processing locally to the data source cuts round trip distance over wide area networks, which in turn reduces latency, lowers bandwidth consumption, improves resiliency during intermittent connectivity, and can keep sensitive data local for privacy and compliance. Typical edge tiers range from on device runtimes, to gateways and micro data centers on premises. These are often coordinated with cloud services for fleet management, updates, and long term analytics. Shi et al. describe edge computing as a “complementary extension of the cloud” that enables faster, context aware processing by decentralizing workloads to the network periphery [7]. This approach improves privacy and compliance as well, since sensitive or regulated information can be processed locally before only essential summaries are sent to the cloud.
+In a typical deployment, an edge runtime handles local messaging, caching, and machine learning inference so devices keep operating even if the internet link drops, then syncs summaries or events to the cloud when connectivity returns. This hybrid pattern lets teams place time critical logic at the edge while using the cloud for heavy training, global orchestration, backups, and compliance archives. An example would be like AWS IoT Greengrass runs components on gateways for local compute and inference and then synchronizes with cloud IoT services. Broadly, clouds frame edge as bringing information storage and computing abilities closer because modern data volumes and real time use cases outpace what pure centralization can serve efficiently.
+
 
 \section{An Overview of Cloud Computing}
 Cloud Computing can best be described as a “computing model that enables on-demand access to a shared pool of configurable computing resources, such as servers, storage, and applications, over the internet” [2]. Cloud Computing resources are located off-site, usually in large data centers managed by a Cloud Service Provider (CSP)[2]. There are three common cloud service models offered to tenants. The first is Infrastructure as a Service (IaaS). IaaS provides tenants with hardware resources and infrastructure as well as a virtual interface to interact with those resources. The tenant uses its own operating system. A step up in service is Platform as a Service. PaaS provides the tenant with everything that is included in the IaaS model along with a base operating system and some development tools. This is mainly used for application development and deployment. The last model, Software as a Service (SaaS) fully provides the hardware resources, operating systems, and applications [6]. These Cloud Computing service models allow companies to focus on their business operations and product instead of computational infrastructure and resource management.
 The greatest strength of Cloud Computing is its tremendous scalability. Most services offer “on-demand self-service” [2]; resources are automatically scaled and distributed across machines to handle workload without needing manual input from the CSP. Pairing this with pay-as-you-go pricing allows companies to effectively manage the IT related aspects of their business effortlessly while only paying for what they actually use. Even with great benefits, Cloud Computing still has shortcomings such as high latency and bandwidth consumption [2]. Data must be transferred between the tenant and the data center, which often miles away from each other, for storage or processing. Cloud Computing helps companies focus on their business instead of IT resources by offering highly scalable and flexible hardware resources, but with a cost of high latency.
 
 \section{Edge Computing vs. Cloud Computing: Latency}
-Start typing here
+One of the most critical performance differences between edge and cloud computing is latency. Latency is the time delay between data generation and system response. Traditional cloud computing architectures route data through wide area networks to centralized servers, often located far from end devices. Even with high speed connectivity, this process typically introduces delays that range from tens to hundreds of milliseconds, which can disrupt real time services such as autonomous driving, industrial automation, or telemedicine. Edge computing mitigates this limitation by processing data closer to the source, reducing the physical distance and network hops required. Khan et al. identify latency reduction as one of the primary motivators for deploying edge systems, showing that local computation can achieve response times in the single digit millisecond range for critical workloads [8]. This responsiveness allows edge based applications to make split second decisions that would be impossible with a purely cloud dependent model.
+However, the superior latency performance of edge computing comes with trade offs. Local devices and gateways often have constrained computational capacity compared to large scale cloud infrastructures. As Khan et al. emphasize, hybrid architectures offer the most effective compromise [8]. This balance allows organizations to maintain real time responsiveness without sacrificing analytical depth or scalability. In this way, edge and cloud computing function as complementary components of a unified ecosystem. The edge provides immediate action, while the cloud delivers global insight. Together, they create the low latency, high performance backbone required for intelligent, connected technologies.
+
 
 \section{Edge Computing vs. Cloud Computing: Privacy}
 Privacy concerns in computing structure vary drastically between cloud computing and edge computing, largely due to where and how data is processed, stored, and transmitted. In traditional cloud computing, user data is sent to centralized data centers operated by third-party providers for storage and use. This model allows for high scalability and accessibility but creates notable privacy and security risks. Users have to rely on the service provider to ensure their data is protected, which introduces vulnerabilities such as unauthorized access, data breaches, and loss of data ownership. 
@@ -145,6 +143,25 @@ Cloud Computing and Edge Computing offer their pros and cons, each fulfilling sp
 	journal={Procedia Computer Science},
 	volume={160},
 	pages={734--739},
+	year={2019},
+	publisher={Elsevier}
+}
+\bibitem{b7}@article{shi2016edge,
+	title={Edge Computing: Vision and Challenges},
+	author={Weisong, Shi and Jie, Cao and Quan, Zhang and Youhuizi, Li and Lanyu, Xu},
+	journal={IEEE Internet of Things Journal},
+	volume={3},
+	number={5},
+	pages={637--646},
+	year={2016},
+	publisher={IEEE}
+}
+\bibitem{b8}@article{khan2019survey,,
+	title={Edge Computing: A Survey},
+	author={Wazir Zada, Khan and Ejaz, Ahmed and Saqib, Hakak and Ibrar, Yaqoob and Athanasios, Vasilakos},
+	journal={Future Generation Computer Systems},
+	volume={97},
+	pages={219--235},
 	year={2019},
 	publisher={Elsevier}
 }
