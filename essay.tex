@@ -57,17 +57,17 @@ The growing need for fast, scalable, and secure data processing has pushed debat
 
 \begin{figure}[t]
 	\centerline{\includegraphics{central_vs_decentral_cloud_image.png}}
-	\caption{A graph showing the various hardware and technologies associated with Centralized and Decentralized Cloud Computing [4].}
+	\caption{A graph showing the various hardware and technologies associated with Centralized and Decentralized Cloud Computing [6].}
 	\label{fig1}
 \end{figure}
 
 \section{An Overview of Edge Computing}
-Edge computing is a distributed architecture that pushes compute, storage, and networking closer to where data is generated rather than sending everything to distant centralized clouds. Processing locally to the data source cuts round trip distance over wide area networks, which in turn reduces latency, lowers bandwidth consumption, improves resiliency during intermittent connectivity, and can keep sensitive data local for privacy and compliance. Typical edge tiers range from on device runtimes, to gateways and micro data centers on premises. These are often coordinated with cloud services for fleet management, updates, and long term analytics. Shi et al. describe edge computing as a “complementary extension of the cloud” that enables faster, context aware processing by decentralizing workloads to the network periphery [7]. This approach improves privacy and compliance as well, since sensitive or regulated information can be processed locally before essential summaries are sent to the cloud.
+Edge computing is a distributed architecture that pushes compute, storage, and networking closer to where data is generated rather than sending everything to distant centralized clouds. Processing locally to the data source cuts round trip distance over wide area networks, which in turn reduces latency, lowers bandwidth consumption, improves resiliency during intermittent connectivity, and can keep sensitive data local for privacy and compliance. Typical edge tiers range from on device runtimes, to gateways and micro data centers on premises. These are often coordinated with cloud services for fleet management, updates, and long term analytics. Shi et al. describe edge computing as a “complementary extension of the cloud” that enables faster, context aware processing by decentralizing workloads to the network periphery [4]. This approach improves privacy and compliance as well, since sensitive or regulated information can be processed locally before essential summaries are sent to the cloud.
 
 In a typical deployment, an edge runtime handles local messaging, caching, and machine learning inference so devices keep operating even if the internet link drops. The system then syncs summaries or events to the cloud when connectivity returns. This hybrid pattern lets teams place time critical logic at the edge while using the cloud for heavy training, global orchestration, backups, and compliance archives. For example, AWS Internet of Things (IoT) Greengrass allows components to run directly on edge gateways, enabling real time data filtering, device communication, and local machine learning inference while maintaining secure synchronization with AWS Cloud services for storage and fleet management. Similar platforms, such as Microsoft Azure IoT Edge and Google Cloud IoT Core, adopt comparable strategies deploying modular containerized workloads that can operate independently when offline and reconnect seamlessly once network access is restored. These systems highlight how the edge extends the cloud’s functionality rather than replacing it, creating a continuum of computation that adapts dynamically to latency, bandwidth, and data sensitivity needs. Broadly, cloud providers frame edge computing as an essential evolution of cloud architecture, bringing information storage, analytics, and decision making closer to the source to meet the growing demands of real time and data intensive applications that centralized infrastructures alone can no longer serve efficiently.
 
 \section{An Overview of Cloud Computing}
-Cloud Computing can best be described as a “computing model that enables on-demand access to a shared pool of configurable computing resources, such as servers, storage, and applications, over the internet” [2]. Cloud Computing resources are located off-site, usually in large data centers managed by a Cloud Service Provider (CSP) [2]. There are three common cloud service models offered to tenants. The first is Infrastructure as a Service (IaaS). IaaS provides tenants with hardware resources and infrastructure as well as a virtual interface to interact with those resources. The tenant uses its own operating system. A step up in service is Platform as a Service (PaaS). PaaS provides the tenant with everything that is included in the IaaS model along with a base operating system and some development tools. This is mainly used for application development and deployment. The last model, Software as a Service (SaaS) fully provides the hardware resources, operating systems, and applications [5]. These Cloud Computing service models allow companies to focus on their business operations and product instead of computational infrastructure and resource management.
+Cloud Computing can best be described as a “computing model that enables on-demand access to a shared pool of configurable computing resources, such as servers, storage, and applications, over the internet” [2]. Cloud Computing resources are located off-site, usually in large data centers managed by a Cloud Service Provider (CSP) [2]. There are three common cloud service models offered to tenants. The first is Infrastructure as a Service (IaaS). IaaS provides tenants with hardware resources and infrastructure as well as a virtual interface to interact with those resources. The tenant uses its own operating system. A step up in service is Platform as a Service (PaaS). PaaS provides the tenant with everything that is included in the IaaS model along with a base operating system and some development tools. This is mainly used for application development and deployment. The last model, Software as a Service (SaaS) fully provides the hardware resources, operating systems, and applications [7]. These Cloud Computing service models allow companies to focus on their business operations and product instead of computational infrastructure and resource management.
 
 The greatest strength of Cloud Computing is its tremendous scalability. Most services offer “on-demand self-service” [2]; resources are automatically scaled and distributed across machines to handle workload without needing manual input from the CSP. Pairing this with pay-as-you-go pricing allows companies to effectively manage the IT related aspects of their business effortlessly while only paying for what they actually use. Even with great benefits, Cloud Computing still has shortcomings such as high latency and bandwidth consumption [2]. Data must be transferred between the tenant and the data center for storage or processing. The tenant and the data center are often miles away from each other, which results in long loading times and high latency. Cloud Computing helps companies focus on their business instead of IT resources by offering highly scalable and flexible hardware resources, but with a cost of high latency.
 
@@ -78,9 +78,9 @@ The greatest strength of Cloud Computing is its tremendous scalability. Most ser
 \end{figure}
 
 \section{Edge Computing vs. Cloud Computing: Latency}
-One of the most critical performance differences between edge and cloud computing is latency. Latency is the time delay between data generation and system response. Traditional cloud computing architectures route data through wide area networks to centralized servers, often located far from end devices. Even with high speed connectivity, this process typically introduces delays that range from tens to hundreds of milliseconds, which can disrupt real time services such as autonomous driving, industrial automation, or telemedicine. Edge computing mitigates this limitation by processing data closer to the source, reducing the physical distance and network hops required. Khan et al. identify latency reduction as one of the primary motivators for deploying edge systems, showing that local computation can achieve response times in the single digit millisecond range for critical workloads [8]. This responsiveness allows edge based applications to make split second decisions that would be impossible with a purely cloud dependent model.
+One of the most critical performance differences between edge and cloud computing is latency. Latency is the time delay between data generation and system response. Traditional cloud computing architectures route data through wide area networks to centralized servers, often located far from end devices. Even with high speed connectivity, this process typically introduces delays that range from tens to hundreds of milliseconds, which can disrupt real time services such as autonomous driving, industrial automation, or telemedicine. Edge computing mitigates this limitation by processing data closer to the source, reducing the physical distance and network hops required. Khan et al. identify latency reduction as one of the primary motivators for deploying edge systems, showing that local computation can achieve response times in the single digit millisecond range for critical workloads [3]. This responsiveness allows edge based applications to make split second decisions that would be impossible with a purely cloud dependent model.
 
-However, the superior latency performance of edge computing comes with trade offs. Local devices and gateways often have constrained computational capacity compared to large scale cloud infrastructures. As Khan et al. emphasize, hybrid architectures offer the most effective compromise [8]. This balance allows organizations to maintain real time responsiveness without sacrificing analytical depth or scalability. In this way, edge and cloud computing function as complementary components of a unified ecosystem. The edge provides immediate action, while the cloud delivers global insight. Together, they create the low latency, high performance backbone required for intelligent, connected technologies. Yet as computation becomes more distributed, this same architecture raises new questions about where data is processed, who controls it, and how privacy can be preserved.
+However, the superior latency performance of edge computing comes with trade offs. Local devices and gateways often have constrained computational capacity compared to large scale cloud infrastructures. As Khan et al. emphasize, hybrid architectures offer the most effective compromise [3]. This balance allows organizations to maintain real time responsiveness without sacrificing analytical depth or scalability. In this way, edge and cloud computing function as complementary components of a unified ecosystem. The edge provides immediate action, while the cloud delivers global insight. Together, they create the low latency, high performance backbone required for intelligent, connected technologies. Yet as computation becomes more distributed, this same architecture raises new questions about where data is processed, who controls it, and how privacy can be preserved.
 
 
 \section{Edge Computing vs. Cloud Computing: Privacy}
@@ -99,7 +99,7 @@ Both standards present a trade off between convenience and control. Cloud comput
 \section{Edge Computing vs. Cloud Computing: Scalability}
 Scalability is a major strength of both Edge Computing and Cloud Computing. Both methods of computing work similarly, allowing for resources to be easily scalable. Edge Computing allows for quick scalability and distribution of workload across multiple edge nodes [2]. However, Edge Computing has limited resources for computation and also requires that an Edge Computing center be in a specific geographic location that is close to the data source and on the edge of the network. If there is no Edge Computing center in this specific area, an Edge Computing center will need to be built. This can be a costly process, especially in areas that are hard to reach and build in [2]. Cloud Computing allows access to vast resources located in large data centers. Similarly to Edge Computing, Cloud Computing will automatically scale up or down depending on what the tenant needs. Unlike Edge Computing, Cloud Computing relies on massive data centers, meaning Cloud Computing has higher scalability potential. Cloud Computing also allows for automatic distribution of workloads across multiple nodes, but at a significantly larger scale then Edge Computing [2].
 
-Big Data Analysis is one of the primary uses of Edge and Cloud Computing [3]. Cloud Computing can scale to a tremendous extent, allowing for enormous amounts of data to be processed and stored in data centers. There are enough hardware resources located in data centers that can automatically scale to handle data sets of any size. Edge Computing, due to hardware limitations, does not have the ability to scale up resources to handle the large amounts of data collected from data sources. In this situation, Edge Computing is useful for collecting and quickly processing data close to the data source. However, the Edge Computing center then needs to pass on this data to data centers where Cloud Computing can handle the Big Data Analysis [3].
+Big Data Analysis is one of the primary uses of Edge and Cloud Computing [5]. Cloud Computing can scale to a tremendous extent, allowing for enormous amounts of data to be processed and stored in data centers. There are enough hardware resources located in data centers that can automatically scale to handle data sets of any size. Edge Computing, due to hardware limitations, does not have the ability to scale up resources to handle the large amounts of data collected from data sources. In this situation, Edge Computing is useful for collecting and quickly processing data close to the data source. However, the Edge Computing center then needs to pass on this data to data centers where Cloud Computing can handle the Big Data Analysis [5].
 
 \section{Integrating Cloud Computing and Edge Computing Together}
 Cloud and edge computing can be complimentary techniques, used together in a hybrid approach. Based on specific requirements, tasks are split up using either technique to best suit a task's needs. Cloud offers a multitude of virtual services that do not need to be handled physically, while edge computing offers a more hands on approach in handling data through things such as local servers and data centers that the company themselves handle. Of course, companies are complex, made up of many different specific needs, in which adopting both techniques is beneficial. Computer science and engineering researcher, Vamsi Krishna Rao states, “This synergy enables real-time data processing and analysis at the network edge while leveraging the scalability and flexibility of cloud resources. Recent studies indicate that this approach can improve data processing efficiency by up to 50\%, a remarkable advancement in fields requiring rapid decision-making and data analysis” [6]. Not only are tech companies using these two strategies but also healthcare, government agencies, schools, and universities. 
@@ -114,7 +114,7 @@ Although hybrid integration of both edge and cloud computing is a popular techni
 
 \begin{figure}[t]
 	\centerline{\includegraphics[scale=0.44]{edge_plus_cloud_improvements.png}}
-	\caption{Edge and Cloud computing integrated together shows great computing improvements across a variety of industries. [6].}
+	\caption{Edge and Cloud computing integrated together shows great computing improvements across a variety of industries [8].}
 	\label{fig3}
 \end{figure}
 
@@ -142,14 +142,33 @@ Cloud computing and edge computing offer their pros and cons, each fulfilling sp
 	pages={19--44},
 	year={2023}
 }
-\bibitem{b3}@article{bajic2019edge,
+\bibitem{b3}@article{khan2019edge,
+	title={Edge computing: A survey},
+	author={Khan, Wazir Zada and Ahmed, Ejaz and Hakak, Saqib and Yaqoob, Ibrar and Ahmed, Arif},
+	journal={Future Generation Computer Systems},
+	volume={97},
+	pages={219--235},
+	year={2019},
+	publisher={Elsevier}
+}
+\bibitem{b4}@article{shi2016edge,
+	title={Edge computing: Vision and challenges},
+	author={Shi, Weisong and Cao, Jie and Zhang, Quan and Li, Youhuizi and Xu, Lanyu},
+	journal={IEEE internet of things journal},
+	volume={3},
+	number={5},
+	pages={637--646},
+	year={2016},
+	publisher={IEEE}
+}
+\bibitem{b5}@article{bajic2019edge,
 	title={EDGE COMPUTING VS. CLOUD COMPUTING: CHALLENGES AND OPPORTUNITIES IN INDUSTRY 4.0.},
 	author={Bajic, Bojana and Cosic, Ilija and Katalinic, Branko and Moraca, Slobodan and Lazarevic, Milovan and Rikalovic, Aleksandar},
 	journal={Annals of DAAAM \& Proceedings},
 	volume={30},
 	year={2019}
 }
-\bibitem{b4}@article{welsh2020resilience,
+\bibitem{b6}@article{welsh2020resilience,
 	title={On resilience in cloud computing: A survey of techniques across the cloud domain},
 	author={Welsh, Thomas and Benkhelifa, Elhadj},
 	journal={ACM computing surveys (CSUR)},
@@ -159,7 +178,7 @@ Cloud computing and edge computing offer their pros and cons, each fulfilling sp
 	year={2020},
 	publisher={ACM New York, NY, USA}
 }
-\bibitem{b5}@article{parikh2019security,
+\bibitem{b7}@article{parikh2019security,
 	title={Security and privacy issues in cloud, fog and edge computing},
 	author={Parikh, Shalin and Dave, Dharmin and Patel, Reema and Doshi, Nishant},
 	journal={Procedia Computer Science},
@@ -168,7 +187,7 @@ Cloud computing and edge computing offer their pros and cons, each fulfilling sp
 	year={2019},
 	publisher={Elsevier}
 }
-\bibitem{b6}Vamsi Krishna Rao, “Enhancing Data Processing Efficiency : The Synergy of Edge Computing and Hybrid Cloud Storage”, Int. J. Sci. Res. Comput. Sci. Eng. Inf. Technol, vol. 10, no. 5, pp. 762–771, Nov. 2024, doi: 10.32628/CSEIT241051063.
+\bibitem{b8}Vamsi Krishna Rao, “Enhancing Data Processing Efficiency : The Synergy of Edge Computing and Hybrid Cloud Storage”, Int. J. Sci. Res. Comput. Sci. Eng. Inf. Technol, vol. 10, no. 5, pp. 762–771, Nov. 2024, doi: 10.32628/CSEIT241051063.
 
 \end{thebibliography}
 
